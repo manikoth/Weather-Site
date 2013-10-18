@@ -9,5 +9,9 @@ $(document).ready(function(){
         
     });//end click
     
+    // Clear Input on Click
+    $('input:text').click(function(){
+        $('input').val('');
+    });// end clear input
     
 });// end document
