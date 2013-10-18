@@ -1,1 +1,8 @@
 /* Stylesheet */
+
+
+#weather {
+    background: red;
+  width: 600px;
+  margin: 0px auto;
+}
