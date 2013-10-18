@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     // Click Button
     $('button').click(function(){
     
@@ -13,7 +13,9 @@ $(document).ready(function(){
             success: function(weather){
                 html = '<h1>' + weather.city + '</h1>';
                 html += '<h3>' + weather.temp + '</h3>';
-                html += ' <p>Tomorrow\'s Forecast High: ' + weather.tomorrow.high + '</p>';
+                html += '<p>Tomorrow\'s Forecast High: ' + weather.tomorrow.high + '</p>';
+                html += ' <img src="img/' + weather.code + '.svg" />';
+                html += $('body').addClass('bg' + weather.code);
                 
                 // Output on Page
                 $('#weather').html(html);
@@ -29,6 +31,5 @@ $(document).ready(function(){
     $('input:text').click(function(){
         $('input').val('');
     });// end clear input    
-
     
 });// end document

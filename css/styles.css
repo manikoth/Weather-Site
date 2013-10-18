@@ -11,3 +11,10 @@ body {
 #weather {
   margin: 0px auto;
 }
+
+.bg29,
+.bg30,
+.bg31,
+.bg32 {
+    background: orange;
+}
