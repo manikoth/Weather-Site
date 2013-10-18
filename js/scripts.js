@@ -9,12 +9,17 @@ $(document).ready(function(){
 
         // GET WEATHER
         $.simpleWeather({
-            zipcode: '90210',
+            zipcode: zip,
             success: function(weather){
-                html = '<h1>' + weather.temp + '</h1>';
+                html = '<h1>' + weather.city + '</h1>';
+                html += '<h3>' + weather.temp + '</h3>';
+                html += ' <p>Tomorrow\'s Forecast High: ' + weather.tomorrow.high + '</p>';
                 
                 // Output on Page
                 $('#weather').html(html);
+            },
+            error: function(error) {
+                $("#weather").html('<p>'+error+'</p>');
             }
         });// end weather
         
