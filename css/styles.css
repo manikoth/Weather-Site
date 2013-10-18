@@ -1,8 +1,10 @@
 /* Stylesheet */
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
 
 
 #weather {
-    background: red;
-  width: 600px;
   margin: 0px auto;
 }
